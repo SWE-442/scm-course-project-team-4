@@ -1,5 +1,6 @@
 package com.mycompany.calculator;
-
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 import java.util.Scanner;
 
 public class Calculator {
@@ -41,6 +42,8 @@ public class Calculator {
 
     public static void add(double num1, double num2) {
         // Student Number 1 , add your code here
+        double result = num1 + num2;
+        System.out.println("Result of addition: " + result);
     }
 
     public static void subtract(double num1, double num2) {
@@ -53,5 +56,13 @@ public class Calculator {
 
     public static void divide(double num1, double num2) {
         // Student Number 4, add your code here 
+    }
+}
+public class CalculatorTest {
+
+    @Test
+    public void testAddition() {
+        double result = Calculator.add(3.0, 2.0);
+        assertEquals(5.0, result, 0.0001);
     }
 }

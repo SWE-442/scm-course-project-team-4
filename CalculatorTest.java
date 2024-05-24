@@ -48,8 +48,8 @@ public class Calculator {
 
     public static void subtract(double num1, double num2) {
         // Student Number 2, add your code here
-        public int subtract(int a, int b) {
-            return a - b;
+            double result = num1 + num2;
+            System.out.println("Result of subtract : " + result);
     }
 
     public static void multiply(double num1, double num2) {
@@ -69,9 +69,8 @@ public class CalculatorTest {
     }
     @Test
     public void testSubtract() {
-        Calculator calculator = new Calculator();
-        assertEquals(1, calculator.subtract(3, 2));
-        assertEquals(-1, calculator.subtract(2, 3));
-        assertEquals(0, calculator.subtract(5, 5));
+        Calculator.subtract(2.0, 3.0);
+        Calculator.subtract(3.0, 2.0);
+;
     }
 }

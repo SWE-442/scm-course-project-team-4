@@ -54,6 +54,8 @@ public class Calculator {
 
     public static void multiply(double num1, double num2) {
         // Student Number 3, add your code here
+        double result = num1 * num2;
+        System.out.println("result of multiply is : " + result);
     }
 
     public static void divide(double num1, double num2) {
@@ -73,5 +75,14 @@ public class CalculatorTest {
         assertEquals(1, calculator.subtract(3, 2));
         assertEquals(-1, calculator.subtract(2, 3));
         assertEquals(0, calculator.subtract(5, 5));
+    }
+    @Test
+    public void testMultiply() {
+        double result1 = Calculator.multiply(3.0, 2.0);
+        assertEquals(6.0, result1, 0.0001); // Expected result is 6.0
+        double result2 = Calculator.multiply(-3.0, 2.0);
+        assertEquals(-6.0, result2, 0.0001); // Expected result is -6.0
+        double result3 = Calculator.multiply(5.0, 0.0);
+        assertEquals(0.0, result3, 0.0001); // Expected result is 0.0
     }
 }
